@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./src/css/main.css">
+    <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.min.css">
 </head>
 
 <body>
@@ -29,9 +30,46 @@
             </nav>
         </div>
         <!-- #endregion menu-->
+        <!-- #region slider-->
+        <div class="slider">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./src/image/image-1.png" alt="#"></div>
+                    <div class="swiper-slide"><img src="./src/image/image-2.png" alt="#"></div>
+                    <div class="swiper-slide"><img src="./src/image/image-3.png" alt="#"></div>
+                    <div class="swiper-slide"><img src="./src/image/image-4.png" alt="#"></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <!-- #endregion slider-->
     </div>
     <!-- #endregion wrapoper-->
 
+
+
+
+    <script src="./node_modules/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.mySwiper', {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
 </body>
 
 </html>
